@@ -1,5 +1,5 @@
 {
-	"name": "@as-integrations/fastify",
+	"name": "@luchanso/apollo-fastify",
 	"version": "0.10.0",
 	"description": "An Apollo Server integration for use with Fastify",
 	"license": "MIT",
@@ -16,7 +16,6 @@
 	"engines": {
 		"node": ">=14"
 	},
-	"type": "module",
 	"main": "build/cjs/index.js",
 	"module": "build/esm/index.js",
 	"types": "build/esm/index.d.ts",
@@ -39,7 +38,6 @@
 		"build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && npm run prettier-build",
 		"watch": "npm run build -- --watch",
 		"prepublishOnly": "clear && npm run delete-build && npm run build",
-		"postpublish": "npm run push",
 		"test": "clear && jest --verbose",
 		"test:ci": "jest --coverage --ci --maxWorkers=2 --reporters=default --reporters=jest-junit",
 		"lint": "eslint src --ext .ts",
